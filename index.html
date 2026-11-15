@@ -42,6 +42,74 @@
             <h2>Contact Us</h2>
             <p>Contact our research centre for general enquiries.</p>
         </section>
+        
+<!-- LOGIN AND SIGN-UP SECTION -->
+
+<section id="authSection" hidden>
+
+    <h2 id="authTitle">Welcome Back</h2>
+
+    <form id="authForm">
+
+        <input
+            type="email"
+            id="authEmail"
+            placeholder="Email address"
+            required
+        >
+
+        <input
+            type="password"
+            id="authPassword"
+            placeholder="Password"
+            required
+            minlength="6"
+        >
+
+        <div id="confirmGroup" hidden>
+            <input
+                type="password"
+                id="confirmPassword"
+                placeholder="Confirm password"
+            >
+        </div>
+
+        <button type="submit" id="authSubmit">
+            Login
+        </button>
+
+    </form>
+
+    <button type="button" id="forgotPassword">
+        Forgot Password?
+    </button>
+
+    <button type="button" id="switchAuth">
+        Don't have an account? Sign Up
+    </button>
+
+    <button type="button" onclick="closeAuth()">
+        Close
+    </button>
+
+    <p id="authMessage"></p>
+
+</section>
+
+<!-- USER DASHBOARD -->
+
+<section id="dashboard" hidden>
+
+    <h2>My Dashboard</h2>
+
+    <p id="dashboardEmail"></p>
+
+    <button type="button" onclick="logout()">
+        Logout
+    </button>
+
+</section>
+        
     </main>
 
     <footer>
