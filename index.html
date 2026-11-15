@@ -1,121 +1,300 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AJ Global Health Research Centre - Medical research and global health information.">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="AJ Global Health Research Centre - International medical research and global health information.">
+
+    <meta name="author"
+          content="Alfred Jeevaranjan Jason">
+
     <title>AJ Global Health Research Centre</title>
+
+    <!-- WEBSITE DESIGN -->
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
+    <!-- HEADER -->
+
     <header>
+
         <h1>AJ Global Health Research Centre</h1>
-        <p>Researching Diseases. Understanding Health. Informing the World.</p>
+
+        <p>
+            Researching Diseases.
+            Understanding Health.
+            Informing the World.
+        </p>
+
+        <!-- NAVIGATION -->
 
         <nav>
+
             <a href="#home">Home</a>
+
             <a href="#about">About</a>
+
             <a href="#research">Research</a>
+
+            <a href="#diseases">Diseases</a>
+
             <a href="#contact">Contact</a>
+
         </nav>
-    </header>
 
-    <main>
-        <section id="home">
-            <h2>Welcome to AJ Global Health Research Centre</h2>
-            <p>Explore educational medical research, diseases and worldwide health information.</p>
-        </section>
+        <!-- LOGIN AND SIGN UP BUTTONS -->
 
-        <section id="about">
-            <h2>About Our Centre</h2>
-            <p>We aim to make health research and medical knowledge accessible to everyone.</p>
-        </section>
+        <div class="account-buttons">
 
-        <section id="research">
-            <h2>Medical Research</h2>
-            <p>Discover research and educational information about global health.</p>
-        </section>
+            <button
+                type="button"
+                onclick="showAuth('login')">
 
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Contact our research centre for general enquiries.</p>
-        </section>
-        
-<!-- LOGIN AND SIGN-UP SECTION -->
+                Login
 
-<section id="authSection" hidden>
+            </button>
 
-    <h2 id="authTitle">Welcome Back</h2>
+            <button
+                type="button"
+                onclick="showAuth('signup')">
 
-    <form id="authForm">
+                Sign Up
 
-        <input
-            type="email"
-            id="authEmail"
-            placeholder="Email address"
-            required
-        >
+            </button>
 
-        <input
-            type="password"
-            id="authPassword"
-            placeholder="Password"
-            required
-            minlength="6"
-        >
-
-        <div id="confirmGroup" hidden>
-            <input
-                type="password"
-                id="confirmPassword"
-                placeholder="Confirm password"
-            >
         </div>
 
-        <button type="submit" id="authSubmit">
-            Login
-        </button>
+    </header>
 
-    </form>
 
-    <button type="button" id="forgotPassword">
-        Forgot Password?
-    </button>
+    <!-- MAIN WEBSITE CONTENT -->
 
-    <button type="button" id="switchAuth">
-        Don't have an account? Sign Up
-    </button>
+    <main>
 
-    <button type="button" onclick="closeAuth()">
-        Close
-    </button>
+        <!-- HOME SECTION -->
 
-    <p id="authMessage"></p>
+        <section id="home">
 
-</section>
+            <h2>
+                Welcome to AJ Global Health Research Centre
+            </h2>
 
-<!-- USER DASHBOARD -->
+            <p>
+                Explore educational medical research,
+                worldwide diseases, health information
+                and scientific developments.
+            </p>
 
-<section id="dashboard" hidden>
+        </section>
 
-    <h2>My Dashboard</h2>
 
-    <p id="dashboardEmail"></p>
+        <!-- ABOUT SECTION -->
 
-    <button type="button" onclick="logout()">
-        Logout
-    </button>
+        <section id="about">
 
-</section>
-        
+            <h2>About Our Research Centre</h2>
+
+            <p>
+                AJ Global Health Research Centre is an
+                educational platform dedicated to sharing
+                medical research, disease information and
+                global health knowledge.
+            </p>
+
+        </section>
+
+
+        <!-- RESEARCH SECTION -->
+
+        <section id="research">
+
+            <h2>Medical Research</h2>
+
+            <p>
+                Discover educational articles, scientific
+                findings and worldwide medical research.
+            </p>
+
+        </section>
+
+
+        <!-- DISEASES SECTION -->
+
+        <section id="diseases">
+
+            <h2>Disease Information</h2>
+
+            <p>
+                Learn about different diseases, their
+                symptoms, risk factors, prevention and
+                available treatments.
+            </p>
+
+        </section>
+
+
+        <!-- LOGIN AND SIGN UP SECTION -->
+
+        <section id="authSection" hidden>
+
+            <h2 id="authTitle">
+                Welcome Back
+            </h2>
+
+            <form id="authForm">
+
+                <input
+                    type="email"
+                    id="authEmail"
+                    placeholder="Email address"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="authPassword"
+                    placeholder="Password"
+                    minlength="6"
+                    required
+                >
+
+                <!-- CONFIRM PASSWORD -->
+
+                <div id="confirmGroup" hidden>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm password"
+                    >
+
+                </div>
+
+                <!-- SUBMIT BUTTON -->
+
+                <button
+                    type="submit"
+                    id="authSubmit">
+
+                    Login
+
+                </button>
+
+            </form>
+
+
+            <!-- FORGOT PASSWORD -->
+
+            <button
+                type="button"
+                id="forgotPassword">
+
+                Forgot Password?
+
+            </button>
+
+
+            <!-- SWITCH LOGIN / SIGN UP -->
+
+            <button
+                type="button"
+                id="switchAuth">
+
+                Don't have an account? Sign Up
+
+            </button>
+
+
+            <!-- CLOSE FORM -->
+
+            <button
+                type="button"
+                onclick="closeAuth()">
+
+                Close
+
+            </button>
+
+
+            <!-- AUTHENTICATION MESSAGE -->
+
+            <p id="authMessage"></p>
+
+        </section>
+
+
+        <!-- USER DASHBOARD -->
+
+        <section id="dashboard" hidden>
+
+            <h2>My Dashboard</h2>
+
+            <p id="dashboardEmail"></p>
+
+            <button
+                type="button"
+                onclick="logout()">
+
+                Logout
+
+            </button>
+
+        </section>
+
+
+        <!-- CONTACT SECTION -->
+
+        <section id="contact">
+
+            <h2>Contact Our Centre</h2>
+
+            <p>
+                For general research enquiries,
+                please contact AJ Global Health Research Centre.
+            </p>
+
+        </section>
+
     </main>
 
+
+    <!-- FOOTER -->
+
     <footer>
-        <p>&copy; 2026 AJ Global Health Research Centre.</p>
-        <p>Educational information only. Not a substitute for professional medical advice.</p>
+
+        <p>
+            &copy; 2026 AJ Global Health Research Centre.
+        </p>
+
+        <p>
+            Researcher: Alfred Jeevaranjan Jason
+        </p>
+
+        <p>
+            Educational information only.
+            Not a substitute for professional medical advice.
+        </p>
+
     </footer>
 
+
+    <!-- FIREBASE AUTHENTICATION JAVASCRIPT -->
+
+    <script
+        type="module"
+        src="js/auth-ui.js">
+    </script>
+
 </body>
-</html>
+
+                    </html>
+                    
