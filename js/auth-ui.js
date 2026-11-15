@@ -6,6 +6,12 @@ import {
   resetPassword
 } from "./auth.js";
 
+import { auth } from "../firebase.js";
+
+import {
+  onAuthStateChanged
+} from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
+
 let mode = "login";
 
 const form = document.getElementById("authForm");
@@ -117,5 +123,20 @@ window.logout = async function() {
   }
 };
 
+// CHECK LOGIN STATUS AND DISPLAY DASHBOARD
+
+onAuthStateChanged(auth, (user) => {
+  const dashboard = document.getElementById("dashboard");
+  const buttons = document.querySelector(".account-buttons");
+
+  dashboard.hidden = !user;
+  buttons.hidden = !!user;
+
+  if (user) {
+    document.getElementById("dashboardEmail").textContent =
+      "Logged in as: " + user.email;
+  }
+});
+
 updateForm();
-  
+                                           
