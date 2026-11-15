@@ -96,3 +96,101 @@ footer {
         padding: 22px;
     }
       }
+
+
+
+/* LOGIN AND SIGN-UP DESIGN */
+
+.account-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px auto 0;
+}
+
+.account-buttons button,
+#authSection button,
+#dashboard button {
+    background: #087f8c;
+    color: #fff;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 7px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.account-buttons button:hover,
+#authSection button:hover,
+#dashboard button:hover {
+    background: #05636d;
+}
+
+#authSection {
+    max-width: 420px;
+    width: 90%;
+    margin: 35px auto;
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #e1e8ed;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+}
+
+#authTitle {
+    color: #123b50;
+    text-align: center;
+}
+
+#authSection input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    margin: 13px 0;
+    border: 1px solid #ccd6dd;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+#authSubmit {
+    width: 100%;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#forgotPassword,
+#switchAuth {
+    display: block;
+    margin: 15px auto;
+    background: transparent !important;
+    color: #087f8c !important;
+}
+
+#authMessage {
+    text-align: center;
+    color: #087f8c;
+    margin-top: 18px;
+}
+
+#dashboard {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+    background: #eef8f8;
+    border-radius: 12px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 600px) {
+    #authSection {
+        padding: 20px;
+    }
+    .account-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
